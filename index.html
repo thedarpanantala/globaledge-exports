@@ -5,64 +5,176 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PM Traders</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Add dropdown hover */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #222;
+      min-width: 160px;
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: white;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #333;
+    }
+    .products-gallery img, .services-gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      margin: 10px;
+    }
+    .products-gallery, .services-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .query-form input, .query-form textarea {
+      width: 100%;
+      padding: 0.8em;
+      margin-bottom: 1em;
+      border: none;
+      border-radius: 4px;
+    }
+    .query-form {
+      max-width: 500px;
+      margin: 2em auto;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="logo">PM Traders</div>
-    <nav class="top-nav">
-      <a href="index.html">Home</a>
-      <a href="product.html">Product</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact Us</a>
-      <a href="blog.html">Blog</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h1>Connecting Markets, Growing Together</h1>
-    <p>Your trusted partner for global trade from India.</p>
-  </section>
-
-  <section class="footer-info">
-    <div class="faq">
-      <h2>Frequently Asked Questions</h2>
-      <ul>
-        <li>Why should I employ an import export specialist company?</li>
-        <li>What do I need to remember before heading to global trade?</li>
-        <li>How do you treat end-to-end shipments?</li>
-        <li>How can I get my business started with you?</li>
-      </ul>
-    </div>
-
-    <div class="quick-links">
-      <h2>Quick Links</h2>
-      <ul>
-        <li>General Trading Products</li>
-        <li>Machinery and Vehicles</li>
-        <li>Agro Commodities</li>
-        <li>Wood and Timber</li>
-      </ul>
-    </div>
-
-    <div class="contact-info">
-      <h2>Contact Us</h2>
-      <div class="contact-box">
-        <h3>Dubai, UAE</h3>
-        <p>219, Mazaya Shopping Center,<br> Al Wasl, Sheikh Zayed Road,<br> Dubai, UAE.</p>
-        <p>Mobile: +971 555 34 24 24</p>
-        <p>Email: info@pmtraders.com</p>
-      </div>
-      <div class="contact-box">
-        <h3>Gurgaon, India</h3>
-        <p>1010, DLF Phase 4,<br> Gurgaon, Haryana, 122009</p>
-        <p>Mobile: +91-8800290909</p>
-        <p>Email: info@pmtraders.com</p>
+<header>
+  <div class="logo">PM Traders</div>
+  <nav class="top-nav">
+    <a href="index.html">Home</a>
+    
+    <div class="dropdown">
+      <a href="#">Products</a>
+      <div class="dropdown-content">
+        <a href="#">Agriculture</a>
+        <a href="#">Furniture</a>
+        <a href="#">Heavy Machinery</a>
+        <a href="#">Electronic</a>
+        <a href="#">Accessories</a>
       </div>
     </div>
-  </section>
 
-  <footer>
-    <p>&copy; 2025 PM Traders | Based in India & UAE</p>
-  </footer>
+    <div class="dropdown">
+      <a href="#">Services</a>
+      <div class="dropdown-content">
+        <a href="#">Consulting</a>
+        <a href="#">Shipment</a>
+        <a href="#">Explore with Us</a>
+      </div>
+    </div>
+
+    <a href="contact.html">Contact Us</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Global Trading Partner</h1>
+  <p>Your trusted export-import partner based in India, trading across the globe.</p>
+</section>
+
+<section>
+  <h2 style="text-align:center; color:#ffc107;">Our Director’s Message</h2>
+  <p style="max-width:800px; margin: auto; text-align: center;">
+    At PM Traders, we envision building bridges between nations by facilitating smooth, ethical, and reliable trade. 
+    Our mission is to bring Indian excellence to the global market with trust and transparency.
+  </p>
+</section>
+
+<section>
+  <h2 style="text-align:center; color:#ffc107;">What We Do</h2>
+  <p style="max-width:800px; margin: auto; text-align: center;">
+    PM Traders connects suppliers and buyers globally through seamless export and import of agricultural goods, machinery, electronics, and more.
+    We specialize in logistics, sourcing, and consultation to ensure your trade journey is smooth and successful.
+  </p>
+</section>
+
+<section>
+  <h2 style="text-align:center; color:#ffc107;">Product Categories</h2>
+  <div class="products-gallery">
+    <img src="images/agriculture.jpg" alt="Agriculture">
+    <img src="images/furniture.jpg" alt="Furniture">
+    <img src="images/machinery.jpg" alt="Heavy Machinery">
+    <img src="images/electronics.jpg" alt="Electronics">
+    <img src="images/accessories.jpg" alt="Accessories">
+  </div>
+</section>
+
+<section>
+  <h2 style="text-align:center; color:#ffc107;">Our Services</h2>
+  <div class="services-gallery">
+    <img src="images/consulting.jpg" alt="Consulting">
+    <img src="images/shipping.jpg" alt="Shipping">
+    <img src="images/explore.jpg" alt="Explore with Us">
+  </div>
+</section>
+
+<section>
+  <h2 style="text-align:center; color:#ffc107;">Submit Your Query</h2>
+  <form class="query-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <textarea rows="5" placeholder="Your Query" required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<section class="footer-info">
+  <div class="faq">
+    <h2>FAQ</h2>
+    <ul>
+      <li>Why should I employ an import export company?</li>
+      <li>What do I need before entering global trade?</li>
+      <li>Do you offer end-to-end shipment support?</li>
+      <li>How can I partner with PM Traders?</li>
+    </ul>
+  </div>
+
+  <div class="quick-links">
+    <h2>Quick Links</h2>
+    <ul>
+      <li>Agriculture</li>
+      <li>Furniture</li>
+      <li>Heavy Machinery</li>
+      <li>Electronics</li>
+      <li>Accessories</li>
+    </ul>
+  </div>
+
+  <div class="contact-info">
+    <h2>Contact Us</h2>
+    <div class="contact-box">
+      <h3>Head Office – Surat, India</h3>
+      <p>276, Swapna Villa, Kamrej,<br> Surat 394185, Gujarat</p>
+      <p>Mobile: +91 9624128937</p>
+      <p>Mobile: +49 15758060417</p>
+      <p>Email: info@pmtraders.com</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 PM Traders | Global Imports & Exports</p>
+</footer>
+
 </body>
 </html>
